@@ -1,0 +1,131 @@
+body {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    );
+  background-image: url("../background.jpg");
+ 
+   background-size: cover;
+  background-repeat: no-repeat;
+    
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.btn-outline-primary
+{
+    background-color:hsl(200, 75%, 88%);
+}
+.btn-outline-danger
+{
+    background-color:hsl(0, 43%, 74%);
+}
+.btn-outline-secondary
+{
+    background-color:#c3c3c6
+}
+.h3,.text-muted
+{
+    color: #fff !important;
+    font-size: 1.75 rem;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* horizontal, vertical, blur, color */
+  font-weight: 700;
+}
+/* Cards */
+.card {
+  border: none;
+  border-radius: 14px;
+}
+.content-card {
+  /* The "Glass" look */
+  background: rgba(255, 255, 255, 0.15); /* White with 15% opacity */
+  backdrop-filter: blur(12px); /* This blurs the background image behind the panel */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  
+  /* Border and Glow */
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 20px;
+  
+  /* Spacing */
+  padding: 24px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.card.shadow-sm {
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+/* Todo item card */
+.todo-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #111827;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.todo-card:hover {
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Title + status */
+.todo-title {
+  font-size: 0.98rem;
+}
+
+.todo-title.completed {
+  color: #9ca3af;
+}
+
+.todo-meta {
+  font-size: 0.8rem;
+}
+
+/* Badges */
+.badge-overdue {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge-due {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* Icon buttons */
+.icon-btn {
+  border: none;
+  background: transparent;
+  padding: 4px;
+  color: #6b7280;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.icon-btn:hover {
+  color: #111827;
+  transform: translateY(-1px);
+}
+
+/* Filters */
+.btn-group .btn.active {
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.25rem;
+  }
+.body {
+    background-size: auto; /* Prevents stretching on smaller screens, shows the whole image */
+    /* Alternatively, you could change the background image itself for a mobile-specific version */
+    /* background-image: url('your-mobile-background-image.jpg'); */
+  }
+  .todo-card {
+    padding: 10px 12px;
+  }
+}
