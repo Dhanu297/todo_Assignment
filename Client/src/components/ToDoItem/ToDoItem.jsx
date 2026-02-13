@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTodoContext } from "../../context/todoContext";
 import { isOverdue } from "../../utils/dateHelper";
+import "./ToDoItem.css"
 
 export default function TodoItem({ todo }) {
   const { toggleTodo, deleteTodo, editTodo, editDueDate } = useTodoContext();
@@ -20,7 +21,7 @@ export default function TodoItem({ todo }) {
 
   if (isEditing) {
     return (
-      <li className="todo-card">
+      <li className="todo-card task-item">
         <div className="row g-2 align-items-center">
           <div className="col-md-6">
             <input
@@ -33,7 +34,7 @@ export default function TodoItem({ todo }) {
           <div className="col-md-4">
             <input
               type="date"
-              className="form-control"
+              className="form-control due-date"
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
             />
@@ -43,7 +44,7 @@ export default function TodoItem({ todo }) {
               Save
             </button>
             <button
-              className="btn btn-sm btn-outline-secondary"
+              className="btn btn-sm btn-outline-secondary "
               onClick={() => setIsEditing(false)}
             >
               Cancel
@@ -72,11 +73,11 @@ export default function TodoItem({ todo }) {
               <i className="bi bi-check-circle-fill text-success small"></i>
             )}
           </div>
-          <div className="todo-meta mt-1 d-flex flex-wrap gap-2 align-items-center">
+          <div className="todo-meta mt-1 d-flex flex-wrap gap-2 align-items-center ">
             {todo.due_date && (
               <span
                 className={
-                  overdue ? "badge badge-overdue" : "badge badge-due"
+                  overdue ? "badge badge-overdue due-date" : "badge badge-due due-date"
                 }
               >
                 {overdue ? "Overdue: " : "Due: "}
@@ -89,7 +90,7 @@ export default function TodoItem({ todo }) {
 
       <div className="d-flex align-items-center gap-1">
         <button
-          className="icon-btn"
+          className="icon-btn task-action-btn"
           type="button"
           onClick={() => setIsEditing(true)}
           aria-label="Edit"
@@ -97,7 +98,7 @@ export default function TodoItem({ todo }) {
           <i className="bi bi-pencil"></i>
         </button>
         <button
-          className="icon-btn"
+          className="icon-btn task-action-btn"
           type="button"
           onClick={() => deleteTodo(todo.id)}
           aria-label="Delete"

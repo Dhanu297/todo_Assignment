@@ -42,9 +42,9 @@ console.log("sortBy from context:", sortBy);
     </div>
 
 
-      <div className="dropdown">
+      <div className="dropdown ">
   <button
-    className="btn btn-sm btn-outline-secondary dropdown-toggle"
+    className="btn btn-sm  dropdown-toggle sort-dropdown"
     data-bs-toggle="dropdown"
   >
     Sort by: {{

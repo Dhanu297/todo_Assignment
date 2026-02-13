@@ -85,16 +85,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* Badges */
-.badge-overdue {
-  background: #fee2e2;
-  color: #b91c1c;
-}
 
-.badge-due {
-  background: #e0f2fe;
-  color: #0369a1;
-}
 
 /* Icon buttons */
 .icon-btn {

@@ -25,3 +25,25 @@
   transform: scale(1.05);
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
 }
+
+.sort-dropdown {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.sort-dropdown:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* To style the actual options (limited browser support, usually requires custom UI) */
+.sort-dropdown option {
+  background: #2d3436; 
+  color: white;
+}
