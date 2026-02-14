@@ -1,6 +1,6 @@
 import { useTodoContext } from "../../context/todoContext";
 import { isOverdue } from "../../utils/dateHelper";
-import './filter.css'
+import './Filter.css'
 export default function Filter() {
   const { todos, filter, setFilter, sortBy, setSortBy } = useTodoContext();
 
