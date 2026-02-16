@@ -123,8 +123,10 @@ http://localhost:5173
 4. Environment variables
 Create .env file in client and add following value
 Client/.env
-VITE_API_URL=http://localhost:5000
+VITE_API_URL=http://localhost:5000 (Make sure the port is same as port in the server's .env file)
 
+Create .env file in server and add following value
+PORT = 5000 or any desitred port
 -------------------------------------------------------------------------------
 ## API Endpoints
 GET    /api/todos
