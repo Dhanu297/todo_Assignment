@@ -1,5 +1,6 @@
-.task-item {
-  
+/*TODO Item styles*/
+
+.task-item {  
   align-items: center;
   background-color: #ffffff;
   /* Increased padding: 15px top/bottom, 20px left/right */
@@ -11,8 +12,8 @@
 }
 /* Badges */
 .badge-overdue {
-  background-color: #C53030; /* Light red tint */
-  color: #FFF5F5;                         /* Stronger red for text */
+  background-color: #C53030; 
+  color: #FFF5F5;                         
   border: 1px solid #FFF5F5;
   padding: 4px 12px;
   border-radius: 20px;
@@ -21,8 +22,8 @@
 }
 
 .badge-due {
-  background-color: #2B6CB0; /* Light red tint */
-  color: #EBF8FF;                         /* Stronger red for text */
+  background-color: #2B6CB0; 
+  color: #EBF8FF;                         
   border: 1px solid #EBF8FF;
   padding: 4px 12px;
   border-radius: 20px;
@@ -31,14 +32,14 @@
 }
 /* Make Edit/Delete icons larger and give them space */
 .task-action-btn {
-  font-size: 1.2rem; /* Increases icon size */
+  font-size: 1.2rem; 
   margin-left: 12px;
-  color: #64748b; /* Professional slate grey */
+  color: #64748b; 
   transition: color 0.2s;
 }
 
 .task-action-btn:hover {
-  color: #3b82f6; /* Subtle blue highlight on hover */
+  color: #3b82f6;
 }
 
 .due-date {
@@ -51,15 +52,15 @@
 
 /* Overdue Tab - Soft Rose instead of Bright Red */
 .tab-overdue {
-  background-color: #fee2e2; /* Soft Pastel Red */
-  color: #991b1b;           /* Deep Red text for contrast */
+  background-color: #fee2e2; 
+  color: #991b1b;         
   border: none;
 }
 
 /* Completed Tab - Soft Sky instead of Bright Blue */
 .tab-completed {
-  background-color: #e0f2fe; /* Soft Pastel Blue */
-  color: #075985;           /* Deep Blue text for contrast */
+  background-color: #e0f2fe; 
+  color: #075985;          
   border: none;
 }
 

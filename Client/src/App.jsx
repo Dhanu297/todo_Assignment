@@ -1,3 +1,4 @@
+/* This is container for home landing page */
 import { TodoProvider } from "./context/todoContext";
 import Home from "./pages/home";
 

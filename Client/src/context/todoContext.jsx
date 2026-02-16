@@ -5,27 +5,16 @@ import { useTodos } from "../hooks/useToDoHooks";
 const TodoContext = createContext(null);
 
 export function TodoProvider({ children }) {
-  /*
-   * FILTER STATE
-   - "all"
-   - "active"
-   - "completed"
-   - "overdue"
-   */
+  // Local component state for filter
+  // FILTER STATE: all, active, completed, overdue
   const [filter, setFilter] = useState("all");
 
-  /**
-   * SORT STATE   
-   - "due_date"
-   - "title"
-   - "status"
-   
-  This value is passed into useTodos(sortBy) so the hook can re-sort whenever sortBy changes.
-   */
+  // Local component state for sort by field
+  //SORT STATE: due_date, title, status
   const [sortBy, setSortBy] = useState("due_date");
 
   // hooks - fetches todos from backend, sorts ,do CRUD operations, manage loading and errorstates
-   
+
   const {
     todos,
     loading,
@@ -34,26 +23,26 @@ export function TodoProvider({ children }) {
     toggleTodo,
     editTodo,
     editDueDate,
-    deleteTodo
+    deleteTodo,
   } = useTodos(sortBy);
 
   //Maintain state throughout the app and Any component can access these via useTodoContext().
-   
+
   return (
     <TodoContext.Provider
       value={{
-        todos,        // sorted list of todos
-        loading,      // loading state for initial fetch
-        error,        // error message if API fails
-        addTodo,      // create a new todo
-        toggleTodo,   // toggle completion status
-        editTodo,     // update title
-        editDueDate,  // update due date
-        deleteTodo,   // remove todo
-        filter,       // current filter mode
-        setFilter,    // update filter mode
-        sortBy,       // current sort mode
-        setSortBy     // update sort mode
+        todos, // sorted list of todos
+        loading, // loading state for initial fetch
+        error, // error message if API fails
+        addTodo, // create a new todo
+        toggleTodo, // toggle completion status
+        editTodo, // update title
+        editDueDate, // update due date
+        deleteTodo, // remove todo
+        filter, // current filter mode
+        setFilter, // update filter mode
+        sortBy, // current sort mode
+        setSortBy, // update sort mode
       }}
     >
       {children}

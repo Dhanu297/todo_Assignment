@@ -1,3 +1,6 @@
+/* This is Middleware for validating */
+
+//This function checks whether the todo is valid
 export function validateTodo(req, res, next) {
   const { title } = req.body;
   if (!title || title.trim() === "") {
@@ -5,6 +8,8 @@ export function validateTodo(req, res, next) {
   }
   next();
 }
+
+//This function checks whether the title is valid
 export function validateTitle(req, res, next) {
   const { title } = req.body;
   if (!title || title.trim() === "") {

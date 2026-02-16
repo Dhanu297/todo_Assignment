@@ -1,3 +1,4 @@
+/*Theme style */
 body {
   background: linear-gradient(
       rgba(0, 0, 0, 0.45),
@@ -84,8 +85,6 @@ body {
 .todo-meta {
   font-size: 0.8rem;
 }
-
-
 
 /* Icon buttons */
 .icon-btn {
